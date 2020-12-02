@@ -1,0 +1,53 @@
+📦pythonblockchainapp
+ ┣ 📂backup
+ ┃ ┗ 📜docker-compose.yml
+ ┣ 📂bootstrap
+ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┗ 📜eventgenerator.cpython-36.pyc
+ ┃ ┣ 📜eventgenerator.py
+ ┃ ┣ 📜eventgenerator.pyc
+ ┃ ┣ 📜evnet_list.json
+ ┃ ┣ 📜random_tx.py
+ ┃ ┣ 📜random_valide.py
+ ┃ ┗ 📜readjson.py
+ ┣ 📂mongodb
+ ┃ ┣ 📂data
+ ┃ ┃ ┗ 📜output.json
+ ┃ ┣ 📜dockerfile
+ ┃ ┣ 📜howtouse.md
+ ┃ ┣ 📜output_withoutqc.json
+ ┃ ┗ 📜output_withqc.json
+ ┣ 📂python_blockchainapp
+ ┃ ┣ 📂compose
+ ┃ ┃ ┗ 📂webapp
+ ┃ ┃ ┃ ┗ 📜Dockerfile-node
+ ┃ ┣ 📂screenshots
+ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┗ 📜3.png
+ ┃ ┣ 📂webapp
+ ┃ ┃ ┣ 📂app
+ ┃ ┃ ┃ ┣ 📂templates
+ ┃ ┃ ┃ ┃ ┣ 📜base.html
+ ┃ ┃ ┃ ┃ ┣ 📜index.html
+ ┃ ┃ ┃ ┃ ┗ 📜transaction.html
+ ┃ ┃ ┃ ┣ 📜__init__.py
+ ┃ ┃ ┃ ┣ 📜requirements.txt
+ ┃ ┃ ┃ ┗ 📜views.py
+ ┃ ┃ ┣ 📜Dockerfile
+ ┃ ┃ ┣ 📜flaskapp.sh
+ ┃ ┃ ┣ 📜requirements.txt
+ ┃ ┃ ┗ 📜run_app.py
+ ┃ ┣ 📜Dockerfile
+ ┃ ┣ 📜bootstrap.sh
+ ┃ ┣ 📜eventgenerator.py
+ ┃ ┣ 📜flaskapp.sh
+ ┃ ┣ 📜networkgenerate.py
+ ┃ ┣ 📜networkstructure.png
+ ┃ ┣ 📜node_server.py
+ ┃ ┣ 📜quality_control.py
+ ┃ ┗ 📜requirements.txt
+ ┣ 📜.env
+ ┣ 📜README.md
+ ┣ 📜docker-compose.yml
+ ┗ 📜network.sh

@@ -1,0 +1,36 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<center>
+	<form action="/connect" id="textform" method="post">
+		<br>
+		<input type="text" name="nodeadress_port" placeholder="Node address">
+	    <input type="submit" value="Connect">
+	</form>
+	</center>
+
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<center>
+		<p style="font-size:25px">
+			<b>Connect two different nodes</b>
+		</p>
+		<hr>
+		<form action="/p2pconnect" id="textform" method="post">
+			<br>
+			<input type="text" name="node1_address" placeholder="From Node1 address">
+			<input type="text" name="node2_address" placeholder="To Node2 address">
+			<input type="submit" value="Connect">
+		</form>
+		</center>
+	
+
+
+{% endblock %}

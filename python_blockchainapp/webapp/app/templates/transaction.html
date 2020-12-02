@@ -1,0 +1,79 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+	<br>
+
+	<center>
+	<form action="/submit" id="textform" method="post">
+		<br>
+		<input type="text" name="sender" placeholder="Sender address">
+		<input type="text" name="receiver" placeholder="Receiver address">
+		<input type="text" name="amount" placeholder="Amount">
+	    <input type="submit" value="Post">
+	</form>
+	</center>
+
+
+	
+	<br>
+
+	<a href="{{node_address}}/mine" target="_blank"><button>Request to mine</button></a>
+	<a href="/transaction"><button>Resync</button></a>
+	<hr>
+
+	<div style="margin: 20px;">
+	<p style="font-size:20px">Chain list</p>
+
+	
+    {% for post in posts %}
+    <div class="post_box">
+	   <div class="post_box-header">
+		  <div class="name-header">Sender : {{post.sender}}</div>
+		  <div class="name-header">Receiver : {{post.receiver}}</div>
+		  <div class="name-header">Amount : {{post.amount}}</div>
+	      <div class="post_box-subtitle"> Posted at <i>{{readable_time(post.timestamp)}}</i></div>
+	   </div>
+	   <div>
+	   </div>
+	</div>
+	{% endfor %}
+
+	<hr>
+
+	</div>
+	
+	<div style="margin: 20px;">
+	<p style="font-size:20px">Pending transactions</p>
+	<p style="font-size:15px">-Waiting to be mined-</p>
+	{% for tx in pending_txs %}
+    <div class="post_box">
+	   <div>
+	      <div class="post_box-body">
+			 <p>Sender: {{tx.sender}} Receiver: {{tx.receiver}} Amount: {{tx.amount}}</p>
+	      </div>
+	   </div>
+	</div>
+	
+	{% endfor %}
+	</div>
+	<hr>
+
+	<div style="margin: 20px;">
+	<p style="font-size:20px">Unvalidated transactions</p>
+	<p style="font-size:15px">-Waiting to be validated-</p>
+	
+	{% for tx in unvalidated_txs %}
+    <div class="post_box">
+	   <div>
+	      <div class="post_box-body">
+			 <p>Sender: {{tx.sender}} Receiver: {{tx.receiver}} Amount: {{tx.amount}}</p>
+	      </div>
+	   </div>
+	</div>
+	
+	{% endfor %}
+	</div>
+
+{% endblock %}
+
